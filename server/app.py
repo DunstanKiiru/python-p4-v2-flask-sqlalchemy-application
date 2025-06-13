@@ -16,5 +16,13 @@ db.init_app(app)
 
 # add views here 
 
+@app.route('/')
+def index():
+    response = make_response(
+        '<h1>Welcome to the pet directory!</h1>',
+        200
+    )
+    return response
+
 if __name__ == '__main__':
     app.run(port=5555, debug=True)
